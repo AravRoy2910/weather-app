@@ -16,7 +16,7 @@ document.querySelector('#search-form').addEventListener("submit", (e) => {
         fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(weather => {
             }).then(
-                return weather.json();
+                // return weather.json();
                 (weather) => {
                         let city = document.querySelector('#city');
                         city.innerText = `${weather.name}, ${weather.sys.country}`;
